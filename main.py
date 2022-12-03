@@ -25,16 +25,5 @@ def getMessage(hash):
     return messageClass.getMessage(hash)
 
 
-# @app.errorhandler(404)
-# def page_not_found(e):
-#     return (
-#         render_template_string(
-#             "Message not found with given hash! Error: {{ errorCode }}", errorCode="404"
-#         ),
-#         404,
-#     )
-
-
-# if __name__ == "__main__":
-#     app.debug = False
-#     app.run()
+if __name__ == "__main__":
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
