@@ -12,5 +12,5 @@ class Message:
 
     def getMessage(self, hash):
         if not hash in self.db.keys():
-            return {"Error": "Message not found with given hash!"}
+            return -1
         return {"message": self.db[hash]}
