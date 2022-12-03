@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string, abort
+from flask import Flask, request, render_template_string, render_template
 from Message import *
 import os
 
@@ -9,7 +9,7 @@ messageClass = Message()
 
 @app.route("/", methods=["GET"])
 def homepage():
-    return "<h1>HOMEPAGE</h1>"
+    return render_template("homepage.html")
 
 
 @app.route("/messages", methods=["POST"])
